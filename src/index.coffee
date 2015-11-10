@@ -20,6 +20,10 @@ module.exports = class Gzip
         path: @_joinToPublic @options.paths?.stylesheet or 'stylesheets'
         ext:  /\.css$/
       }
+      {
+        path: @_joinToPublic @options.paths?.svg or 'svgs'
+        ext: /\.svg$/
+      }
     ]
 
   onCompile: (generatedFiles) ->
